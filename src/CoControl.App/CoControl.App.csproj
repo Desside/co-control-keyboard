@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <!-- NOTE: do NOT set AssemblyName to 'cocontrol' — deps.json and NuGet compare
+         names case-insensitively and it collides with the 'CoControl' library.
+         publish.cmd renames the final exe instead. -->
+    <RootNamespace>CoControl.App</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoControl.csproj" />
+  </ItemGroup>
+</Project>
